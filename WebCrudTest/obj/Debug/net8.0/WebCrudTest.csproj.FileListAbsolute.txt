@@ -42,3 +42,4 @@ C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\refint\WebC
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.pdb
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.genruntimeconfig.cache
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\ref\WebCrudTest.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.sourcelink.json

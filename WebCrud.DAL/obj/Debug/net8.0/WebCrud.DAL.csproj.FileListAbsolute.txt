@@ -13,3 +13,4 @@ C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\refint\WebCrud.DAL.dll
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.pdb
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\ref\WebCrud.DAL.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.sourcelink.json

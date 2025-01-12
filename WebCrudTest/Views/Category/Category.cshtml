@@ -7,27 +7,27 @@
     <div class="col-sm-12">
         <div class="card">
             <div class="card-header">
-                <div class="card-body">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h1 class="card-title mx-auto">Lista de Categorías</h1>
                     <button class="btn btn-success" id="btnNew">Nueva Categoría</button>
-                    <hr />
-                    <table class="table table-striped" id="tbList">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre Categoría</th>
-                                <th>Activa</th>
-                                <th>Opciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
                 </div>
+                <hr />
+                <table class="table table-striped" id="tbList">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre Categoría</th>
+                            <th>Activa</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
-
 
 <!--Modal-->
 <div class="modal" tabindex="-1">
@@ -41,7 +41,8 @@
                 <input type="hidden" id="txtId" value="0" />
                 <div class="mb-2">
                     <label>ID Categoría</label>
-                    <input type="number" class="form-control" id="txtIdCategoria" />
+                    <input type="number" class="form-control" id="txtIdCategoria" min="1" value="1" />
+
                 </div>
                 <div class="mb-2">
                     <label>Nombre</label>

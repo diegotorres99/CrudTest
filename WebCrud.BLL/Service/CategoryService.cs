@@ -13,13 +13,11 @@ namespace WebCrud.BLL.Service
 
         public async Task<bool> Insert(Category entity)
         {
-            // Call the Insert method from the repository to add a new category
             return await _categoryRepository.Insert(entity);
         }
 
         public async Task<bool> Delete(int id)
         {
-            // Call the Delete method from the repository to delete a category by ID
             return await _categoryRepository.Delete(id);
         }
 
@@ -29,14 +27,29 @@ namespace WebCrud.BLL.Service
             return categories.AsQueryable();
         }
 
-        public Task<bool> Update(Category entity)
+        public async Task<bool> Update(Category entity)
         {
-            throw new NotImplementedException();
+            var existingCategory = await _categoryRepository.GetById(entity.nIdCategori);
+            if (existingCategory == null)
+            {
+                throw new KeyNotFoundException($"Category with ID {entity.nIdCategori} not found.");
+            }
+
+            existingCategory.cNombCateg = entity.cNombCateg;
+            existingCategory.cEsActiva = entity.cEsActiva;
+
+            return await _categoryRepository.Update(existingCategory);
         }
 
-        public Task<Category> GetById(int id)
+        public async Task<Category> GetById(int id)
         {
-            throw new NotImplementedException();
+            var category = await _categoryRepository.GetById(id);
+            if (category == null)
+            {
+                throw new KeyNotFoundException($"Category with ID {id} not found.");
+            }
+
+            return category;
         }
     }
 }

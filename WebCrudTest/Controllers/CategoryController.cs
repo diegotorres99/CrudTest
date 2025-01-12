@@ -7,7 +7,6 @@ namespace WebCrudTest.Controllers
 {
     public class CategoryController : Controller
     {
-        //private readonly ILogger _logger;
         private ICategoryService _categoryService;
 
         public CategoryController(ICategoryService categoryService)
@@ -25,20 +24,20 @@ namespace WebCrudTest.Controllers
         {
             try
             {
-                var query = await _categoryService.GetAll(); // Fetch all categories from the service
+                var query = await _categoryService.GetAll(); 
 
                 var list = query.Select(c => new VMCategory()
                 {
-                    Id = c.nIdCategori,           // Map the ID
-                    Name = c.cNombCateg,        // Map the category name
-                    isActive = c.cEsActiva        // Map the active status
+                    Id = c.nIdCategori,           
+                    Name = c.cNombCateg,        
+                    isActive = c.cEsActiva        
                 }).ToList();
 
-                return StatusCode(StatusCodes.Status200OK, list); // Return the list as a 200 response
+                return StatusCode(StatusCodes.Status200OK, list); 
             }
             catch (Exception ex)
             {
-                return new JsonResult(ex); // Return any exception as a JSON response
+                return new JsonResult(ex);
             }
         }
 
@@ -73,7 +72,6 @@ namespace WebCrudTest.Controllers
         {
             try
             {
-                // Check if the Category exists
                 var existingCategory = await _categoryService.GetById(model.Id);
                 if (existingCategory == null)
                 {
@@ -83,14 +81,11 @@ namespace WebCrudTest.Controllers
                     });
                 }
 
-                // Update the category with the new values from the model
                 existingCategory.cNombCateg = model.Name;
                 existingCategory.cEsActiva = model.isActive;
 
-                // Call the service to update the category in the database
                 bool response = await _categoryService.Update(existingCategory);
 
-                // Return response status based on success/failure
                 return StatusCode(StatusCodes.Status200OK, new
                 {
                     valor = response
@@ -102,43 +97,25 @@ namespace WebCrudTest.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
             try
             {
-                // Check if the Category exists
-                var category = await _categoryService.GetById(id);
-                if (category == null)
-                {
-                    return StatusCode(StatusCodes.Status404NotFound, new
-                    {
-                        message = "Category not found"
-                    });
-                }
+                bool result = await _categoryService.Delete(id);
 
-                // Call the service to delete the category from the database
-                bool response = await _categoryService.Delete(id);
-
-                // Return response status based on success/failure
-                if (response)
+                if (result)
                 {
-                    return StatusCode(StatusCodes.Status200OK, new
-                    {
-                        message = "Category deleted successfully"
-                    });
+                    return Ok(new { message = "Category deleted successfully" });
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status500InternalServerError, new
-                    {
-                        message = "Error deleting category"
-                    });
+                    return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Error deleting category" });
                 }
             }
             catch (Exception ex)
             {
-                return new JsonResult(new { error = ex.Message });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "An unexpected error occurred: " + ex.Message });
             }
         }
 

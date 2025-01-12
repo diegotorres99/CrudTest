@@ -19,31 +19,27 @@ namespace WebCrud.DAL.Repositorie
         {
             try
             {
-                using (var connection = _databaseHelper.GetConnection()) // Assuming _databaseHelper provides the connection
+                using (var connection = _databaseHelper.GetConnection()) 
                 {
                     using (var command = new SqlCommand("Usp_Ins_Co_Categoria", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        // Add parameters to the command
-                        command.Parameters.AddWithValue("@nIdCategori", entity.nIdCategori); // User-defined ID
+                        command.Parameters.AddWithValue("@nIdCategori", entity.nIdCategori); 
                         command.Parameters.AddWithValue("@cNombCateg", entity.cNombCateg);
                         command.Parameters.AddWithValue("@cEsActiva", entity.cEsActiva);
 
-                        //connection.Open(); // Open the connection
-                        var rowsAffected = await command.ExecuteNonQueryAsync(); // Execute the command
+                        var rowsAffected = await command.ExecuteNonQueryAsync(); 
 
-                        return rowsAffected > 0; // Return true if rows were inserted
+                        return rowsAffected > 0; 
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as required
                 throw new ApplicationException("An error occurred while inserting the category.", ex);
             }
         }
-
 
         public async Task<bool> Delete(int id)
         {
@@ -51,28 +47,18 @@ namespace WebCrud.DAL.Repositorie
             {
                 using (var connection = _databaseHelper.GetConnection())
                 {
-                    // Define the SQL command to delete a category by its ID
                     using (var command = new SqlCommand("Usp_Del_Co_Categoria", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-
-                        // Add parameter for the category ID
                         command.Parameters.AddWithValue("@nIdCategori", id);
-
-                        // Open connection and execute the query
-                        await connection.OpenAsync();
-
-                        // Execute the delete command and check if any rows were affected
                         int rowsAffected = await command.ExecuteNonQueryAsync();
 
-                        // If rows were affected, deletion was successful
-                        return rowsAffected > 0;
+                        return rowsAffected > 0 || rowsAffected == -1;
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Handle any errors (logging, rethrow, etc.)
                 throw new Exception("Error deleting category", ex);
             }
         }
@@ -105,16 +91,59 @@ namespace WebCrud.DAL.Repositorie
             return categories;
         }
 
-
-        public Task<Category> GetById(int id)
+        public async Task<Category> GetById(int id)
         {
-            throw new NotImplementedException();
+            Category category = null;
+
+            using (var connection = _databaseHelper.GetConnection())
+            {
+                using (var command = new SqlCommand("Usp_Sel_Co_CategoriaById", connection)) 
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add(new SqlParameter("@nIdCategori", SqlDbType.Int) { Value = id });
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync()) 
+                        {
+                            category = new Category
+                            {
+                                nIdCategori = reader.GetInt32(reader.GetOrdinal("nIdCategori")),
+                                cNombCateg = reader.GetString(reader.GetOrdinal("cNombCateg")),
+                                cEsActiva = reader.GetBoolean(reader.GetOrdinal("cEsActiva"))
+                            };
+                        }
+                    }
+                }
+            }
+
+            return category;
         }
 
-
-        public Task<bool> Update(Category entity)
+        public async Task<bool> Update(Category entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = _databaseHelper.GetConnection())
+                {
+                    using (var command = new SqlCommand("Usp_Upd_Co_Categoria", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add(new SqlParameter("@nIdCategori", SqlDbType.Int) { Value = entity.nIdCategori });
+                        command.Parameters.Add(new SqlParameter("@cNombCateg", SqlDbType.NVarChar, 100) { Value = entity.cNombCateg });
+                        command.Parameters.Add(new SqlParameter("@cEsActiva", SqlDbType.Bit) { Value = entity.cEsActiva });
+
+                        int rowsAffected = await command.ExecuteNonQueryAsync();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("An error occurred while updating the category.", ex);
+            }
         }
+
     }
 }

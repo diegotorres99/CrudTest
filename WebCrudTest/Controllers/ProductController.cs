@@ -6,7 +6,6 @@ namespace WebCrudTest.Controllers
 {
     public class ProductController : Controller
     {
-        //private readonly ILogger _logger;
         private IProductService _productService;
         public ProductController(IProductService productService)
         {
@@ -41,30 +40,5 @@ namespace WebCrudTest.Controllers
             }
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> Update([FromBody] VMCategory model)
-        //{
-        //    try
-        //    {
-        //        var newModel = new Category()
-        //        {
-        //            nIdCategori = model.Id,
-        //            cNombCateg = model.Nombre,
-        //            cEsActiva = model.isActive
-        //        };
-
-        //        bool response = await _categoryService.Insert(newModel);
-
-        //        return StatusCode(StatusCodes.Status200OK, new
-        //        {
-        //            valor = response
-        //        });
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return new JsonResult(ex);
-        //    }
-        //}
     }
 }

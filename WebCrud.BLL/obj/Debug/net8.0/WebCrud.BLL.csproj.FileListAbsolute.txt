@@ -15,3 +15,4 @@ C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\refint\WebCrud.BLL.dll
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.pdb
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\ref\WebCrud.BLL.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.sourcelink.json
