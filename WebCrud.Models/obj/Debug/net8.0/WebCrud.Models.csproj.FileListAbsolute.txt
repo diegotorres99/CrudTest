@@ -1,0 +1,11 @@
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\bin\Debug\net8.0\WebCrud.Models.deps.json
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\bin\Debug\net8.0\WebCrud.Models.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\bin\Debug\net8.0\WebCrud.Models.pdb
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.AssemblyInfoInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.AssemblyInfo.cs
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.csproj.CoreCompileInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\refint\WebCrud.Models.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.pdb
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\ref\WebCrud.Models.dll

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "/v+mC8WkOvOCWQbEjPzQd4EOs2G24b1mCR/Vk5DC68kBoAjgGG9blT/o4z1zM+NpHy5hc/5hBWsPSpI+z/qKzw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\luis_\\source\\repos\\WebCrudTest\\WebCrud.BLL\\WebCrud.BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luis_\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\luis_\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\luis_\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\luis_\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\luis_\\.nuget\\packages\\system.data.sqlclient\\4.9.0\\system.data.sqlclient.4.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}

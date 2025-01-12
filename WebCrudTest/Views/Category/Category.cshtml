@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "List";
+}
+
+<!--Table-->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-body">
+                    <button class="btn btn-success" id="btnNew">Nueva Categoría</button>
+                    <hr />
+                    <table class="table table-striped" id="tbList">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre Categoría</th>
+                                <th>Activa</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Modal-->
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtId" value="0" />
+                <div class="mb-2">
+                    <label>ID Categoría</label>
+                    <input type="number" class="form-control" id="txtIdCategoria" />
+                </div>
+                <div class="mb-2">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" id="txtNombreCategoria" />
+                </div>
+                <div class="mb-2">
+                    <label for="cbxIsActive">Categoría Activa</label>
+                    <select class="form-control" id="cbxIsActive">
+                        <option value="true">Si</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnSave">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Category.js"></script>
+}

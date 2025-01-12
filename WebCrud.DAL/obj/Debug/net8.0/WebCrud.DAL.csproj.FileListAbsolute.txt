@@ -1,0 +1,15 @@
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\bin\Debug\net8.0\WebCrud.DAL.deps.json
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\bin\Debug\net8.0\WebCrud.DAL.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\bin\Debug\net8.0\WebCrud.DAL.pdb
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\bin\Debug\net8.0\WebCrud.Models.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\bin\Debug\net8.0\WebCrud.Models.pdb
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.csproj.AssemblyReference.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.AssemblyInfoInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.AssemblyInfo.cs
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.csproj.CoreCompileInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud..C6014652.Up2Date
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\refint\WebCrud.DAL.dll
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\WebCrud.DAL.pdb
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.DAL\obj\Debug\net8.0\ref\WebCrud.DAL.dll
