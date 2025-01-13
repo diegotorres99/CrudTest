@@ -119,5 +119,21 @@ namespace WebCrudTest.Controllers
             }
         }
 
+        [HttpGet("GetNextId")]
+        public async Task<IActionResult> GetNextId()
+        {
+            try
+            {
+                int nextId = await _categoryService.GetNextCategoryId();
+
+                return StatusCode(StatusCodes.Status200OK, new { nextId });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Error fetching next ID", error = ex.Message });
+            }
+        }
+
+
     }
 }

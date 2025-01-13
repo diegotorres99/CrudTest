@@ -1,16 +1,16 @@
-﻿using WebCrud.DAL.Repository;
-using WebCrud.Models;
+﻿using WebCrud.Models;
 
 namespace WebCrud.BLL.Service
 {
     public class CategoryService : ICategoryService
     {
-        private readonly IGenericRepository<Category> _categoryRepository;
-        public CategoryService(IGenericRepository<Category> categoryRepository)
+
+        private readonly ICategoryRepository _categoryRepository;
+
+        public CategoryService(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
         }
-
         public async Task<bool> Insert(Category entity)
         {
             return await _categoryRepository.Insert(entity);
@@ -47,6 +47,17 @@ namespace WebCrud.BLL.Service
             if (category == null)
             {
                 throw new KeyNotFoundException($"Category with ID {id} not found.");
+            }
+
+            return category;
+        }
+
+        public async Task<int> GetNextCategoryId()
+        {
+            var category = await _categoryRepository.GetNextCategoryId();
+            if (category == null)
+            {
+                throw new KeyNotFoundException($"Category with ID not found.");
             }
 
             return category;

@@ -22,7 +22,7 @@ builder.Services.AddSingleton<IDatabaseHelper>(provider =>
 builder.Services.AddScoped<IGenericRepository<Product>, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
-builder.Services.AddScoped<IGenericRepository<Category>, CategoryRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();

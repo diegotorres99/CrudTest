@@ -9,5 +9,6 @@ namespace WebCrud.BLL.Service
         Task<bool> Delete(int id);
         Task<IQueryable<Category>> GetAll();
         Task<Category> GetById(int id);
+        Task<int> GetNextCategoryId();
     }
 }

@@ -1,4 +1,4 @@
-uri = "/Category/getCategories";
+uri = "/Category/";
 
 let isEditing = false;
 let currentItem = null;
@@ -9,13 +9,12 @@ const categoryModel = {
     isActive: 0,
 };
 
-
 $(document).ready(() => {
     getCategories();
 });
 
 function getCategories() {
-    fetch(uri).then((response) => {
+    fetch(uri + 'getCategories').then((response) => {
         return response.ok ? response.json() : Promise.reject(response);
     }).then((dataJson) => {
         $("#tbList tbody").empty();
@@ -54,7 +53,6 @@ function Clean() {
     $("#txtNombreCategoria").val('');
     $("#cbxIsActiva").val('');
 }
-
 function UpdateItem(item) {
     let newModel = categoryModel;
     newModel["id"] = $("#txtIdCategoria").val();
@@ -78,7 +76,6 @@ function UpdateItem(item) {
         }
     })
 }
-
 function CreateItem() {
     let newModel = categoryModel;
     newModel["id"] = $("#txtIdCategoria").val();
@@ -123,6 +120,7 @@ $("#tbList tbody").on("click", ".btn-edit", function () {
 
     ShowModal(item);
 })
+
 $("#tbList tbody").on("click", ".btn-delete", function () {
     let id = $(this).data("txtId");
     let result = window.confirm("Desea eliminar la categoria?");
@@ -166,6 +164,32 @@ $("#btnSave").on("click", function () {
     if (isEditing) {
         UpdateItem(currentItem);
     } else {
+        GetNextId();
         CreateItem();
     }
 });
+function GetNextId() {
+    console.log('Fetching the next category ID...');
+    const txtIdCategory = $("#txtIdCategory"); // jQuery selector to target the input field
+
+    // Optional: Disable the input field during fetch
+    txtIdCategory.prop("disabled", true);
+
+    fetch(uri + 'GetNextId')
+        .then(response => {
+            txtIdCategory.prop("disabled", false); 
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            txtIdCategory.val(data.nextId); 
+            console.log(`Next ID set to: ${data.nextId}`);
+        })
+        .catch(error => {
+            txtIdCategory.prop("disabled", false); 
+            console.error('Error fetching next ID:', error);
+            alert('Failed to fetch the next category ID. Please try again later.');
+        });
+}

@@ -6,7 +6,7 @@ using WebCrud.Models;
 
 namespace WebCrud.DAL.Repositorie
 {
-    public class CategoryRepository : IGenericRepository<Category>
+    public class CategoryRepository : IGenericRepository<Category>, ICategoryRepository
     {
         private readonly IDatabaseHelper _databaseHelper;
 
@@ -145,5 +145,18 @@ namespace WebCrud.DAL.Repositorie
             }
         }
 
+        public async Task<int> GetNextCategoryId()
+        {
+            using (var connection = _databaseHelper.GetConnection())
+            {
+                using (var command = new SqlCommand("Usp_Get_Next_Category_Id", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    var result = await command.ExecuteScalarAsync(); // Assumes SP returns max ID
+                    return Convert.ToInt32(result) + 1;
+                }
+            }
+        }
     }
 }
