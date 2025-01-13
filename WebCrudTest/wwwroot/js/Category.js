@@ -2,7 +2,6 @@ uri = "/Category/";
 
 let isEditing = false;
 let currentItem = null;
-
 const categoryModel = {
     id: 0,
     name: "",
@@ -12,7 +11,6 @@ const categoryModel = {
 $(document).ready(() => {
     getCategories();
 });
-
 function getCategories() {
     fetch(uri + 'getCategories').then((response) => {
         return response.ok ? response.json() : Promise.reject(response);
@@ -35,7 +33,6 @@ function getCategories() {
         console.error('Error fetching data:', error);
     });
 }
-
 function ShowModal(model) {
 
     $("#txtIdCategoria").val(model.id);
@@ -46,14 +43,16 @@ function ShowModal(model) {
 
     $('.modal').modal("show");
 }
-
 function Clean() {
     $("#txtIdCategoria").val('');
     $("#txtId").val('');
     $("#txtNombreCategoria").val('');
     $("#cbxIsActiva").val('');
 }
-function UpdateItem(item) {
+function UpdateItem() {
+    if (!validateFields()) {
+        return; 
+    }
     let newModel = categoryModel;
     newModel["id"] = $("#txtIdCategoria").val();
     newModel["name"] = $("#txtNombreCategoria").val();
@@ -77,6 +76,11 @@ function UpdateItem(item) {
     })
 }
 function CreateItem() {
+
+    if (!validateFields()) {
+        return;
+    }
+
     let newModel = categoryModel;
     newModel["id"] = $("#txtIdCategoria").val();
     newModel["name"] = $("#txtNombreCategoria").val();
@@ -111,6 +115,38 @@ function CreateItem() {
 
             alert(`Por favor ingresa un ID mayor al anterior, Ej: ${parseInt(newModel["id"]) + 1}`);
         });
+}
+function GetNextId() {
+    const txtIdCategory = $("#txtIdCategoria");
+    txtIdCategory.prop("disabled", true);
+
+    fetch(uri + 'GetNextId')
+        .then(response => {
+            txtIdCategory.prop("disabled", false);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            txtIdCategory.val(data.nextId);
+        })
+        .catch(error => {
+            txtIdCategory.prop("disabled", false);
+        });
+}
+function validateFields() {
+    if ($("#txtIdCategoria").val() == "" || $("#txtIdCategoria").val() <= 0) {
+        alert('ID is required!');
+        $("#txtIdCategoria").focus();
+        return false;
+    }
+    if ($("#txtNombreCategoria").val() == "") {
+        alert('Category name is required!');
+        $("#txtNombreCategoria").focus();
+        return false;
+    }
+    return true;
 }
 
 $("#tbList tbody").on("click", ".btn-edit", function () {
@@ -148,6 +184,8 @@ $("#btnNew").click(() => {
         NombreCategoria: "",
         isActiva: 0,
     });
+
+    GetNextId();
 })
 
 $("#btnUpdate").click(() => {
@@ -164,32 +202,7 @@ $("#btnSave").on("click", function () {
     if (isEditing) {
         UpdateItem(currentItem);
     } else {
-        GetNextId();
+
         CreateItem();
     }
 });
-function GetNextId() {
-    console.log('Fetching the next category ID...');
-    const txtIdCategory = $("#txtIdCategory"); // jQuery selector to target the input field
-
-    // Optional: Disable the input field during fetch
-    txtIdCategory.prop("disabled", true);
-
-    fetch(uri + 'GetNextId')
-        .then(response => {
-            txtIdCategory.prop("disabled", false); 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            txtIdCategory.val(data.nextId); 
-            console.log(`Next ID set to: ${data.nextId}`);
-        })
-        .catch(error => {
-            txtIdCategory.prop("disabled", false); 
-            console.error('Error fetching next ID:', error);
-            alert('Failed to fetch the next category ID. Please try again later.');
-        });
-}

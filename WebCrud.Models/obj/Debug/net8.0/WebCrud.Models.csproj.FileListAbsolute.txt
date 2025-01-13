@@ -5,6 +5,7 @@ C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.AssemblyInfoInputs.cache
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.AssemblyInfo.cs
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.csproj.CoreCompileInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.sourcelink.json
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.dll
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\refint\WebCrud.Models.dll
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.Models\obj\Debug\net8.0\WebCrud.Models.pdb

@@ -1,11 +1,3 @@
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.csproj.AssemblyReference.cache
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.AssemblyInfoInputs.cache
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.AssemblyInfo.cs
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.csproj.CoreCompileInputs.cache
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.RazorAssemblyInfo.cache
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.RazorAssemblyInfo.cs
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\bin\Debug\net8.0\appsettings.json
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\bin\Debug\net8.0\WebCrudTest.staticwebassets.runtime.json
@@ -26,6 +18,15 @@ C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\bin\Debug\net8.0\WebCrud.Mod
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\bin\Debug\net8.0\WebCrud.BLL.pdb
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\bin\Debug\net8.0\WebCrud.DAL.pdb
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\bin\Debug\net8.0\WebCrud.Models.pdb
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.csproj.AssemblyReference.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.AssemblyInfoInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.AssemblyInfo.cs
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.csproj.CoreCompileInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.RazorAssemblyInfo.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.RazorAssemblyInfo.cs
+C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.sourcelink.json
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\staticwebassets\msbuild.WebCrudTest.Microsoft.AspNetCore.StaticWebAssets.props
@@ -42,4 +43,3 @@ C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\refint\WebC
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.pdb
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.genruntimeconfig.cache
 C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\ref\WebCrudTest.dll
-C:\Users\luis_\source\repos\WebCrudTest\WebCrudTest\obj\Debug\net8.0\WebCrudTest.sourcelink.json

@@ -119,7 +119,7 @@ namespace WebCrudTest.Controllers
             }
         }
 
-        [HttpGet("GetNextId")]
+        [HttpGet]
         public async Task<IActionResult> GetNextId()
         {
             try
@@ -133,7 +133,6 @@ namespace WebCrudTest.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Error fetching next ID", error = ex.Message });
             }
         }
-
 
     }
 }

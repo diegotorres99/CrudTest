@@ -10,9 +10,9 @@ C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.AssemblyInfoInputs.cache
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.AssemblyInfo.cs
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.csproj.CoreCompileInputs.cache
+C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.sourcelink.json
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud..B7F62CF8.Up2Date
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.dll
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\refint\WebCrud.BLL.dll
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.pdb
 C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\ref\WebCrud.BLL.dll
-C:\Users\luis_\source\repos\WebCrudTest\WebCrud.BLL\obj\Debug\net8.0\WebCrud.BLL.sourcelink.json

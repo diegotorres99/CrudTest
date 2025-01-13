@@ -54,13 +54,13 @@ namespace WebCrud.BLL.Service
 
         public async Task<int> GetNextCategoryId()
         {
-            var category = await _categoryRepository.GetNextCategoryId();
-            if (category == null)
+            var idCategory = await _categoryRepository.GetNextCategoryId();
+            if (idCategory <= 0)
             {
-                throw new KeyNotFoundException($"Category with ID not found.");
+                throw new KeyNotFoundException($"Next category ID not found.");
             }
 
-            return category;
+            return idCategory;
         }
     }
 }
