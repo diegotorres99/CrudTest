@@ -153,7 +153,7 @@ namespace WebCrud.DAL.Repositorie
                 {
                     command.CommandType = CommandType.StoredProcedure;
 
-                    var result = await command.ExecuteScalarAsync(); // Assumes SP returns max ID
+                    var result = await command.ExecuteScalarAsync(); 
                     return Convert.ToInt32(result) + 1;
                 }
             }
